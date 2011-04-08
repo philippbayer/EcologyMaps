@@ -1,0 +1,31 @@
+<h1>Listing country_years</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Emission</th>
+    <th>Sufficiency</th>
+    <th>Area habitats</th>
+    <th>Area habitats percent</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @country_years.each do |country_year| %>
+  <tr>
+    <td><%= country_year.number %></td>
+    <td><%= country_year.emission %></td>
+    <td><%= country_year.sufficiency %></td>
+    <td><%= country_year.area_habitats %></td>
+    <td><%= country_year.area_habitats_percent %></td>
+    <td><%= link_to 'Show', country_year %></td>
+    <td><%= link_to 'Edit', edit_country_year_path(country_year) %></td>
+    <td><%= link_to 'Destroy', country_year, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Country year', new_country_year_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @country_year.number %>
+</p>
+
+<p>
+  <b>Emission:</b>
+  <%= @country_year.emission %>
+</p>
+
+<p>
+  <b>Sufficiency:</b>
+  <%= @country_year.sufficiency %>
+</p>
+
+<p>
+  <b>Area habitats:</b>
+  <%= @country_year.area_habitats %>
+</p>
+
+<p>
+  <b>Area habitats percent:</b>
+  <%= @country_year.area_habitats_percent %>
+</p>
+
+
+<%= link_to 'Edit', edit_country_year_path(@country_year) %> |
+<%= link_to 'Back', country_years_path %>

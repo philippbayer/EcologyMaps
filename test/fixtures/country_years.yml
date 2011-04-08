@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  number: 
+  emission: 
+  sufficiency: 1.5
+  area_habitats: 1.5
+  area_habitats_percent: 1.5
+
+two:
+  number: 
+  emission: 
+  sufficiency: 1.5
+  area_habitats: 1.5
+  area_habitats_percent: 1.5

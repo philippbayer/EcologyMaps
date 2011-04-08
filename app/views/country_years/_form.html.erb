@@ -1,0 +1,37 @@
+<%= form_for(@country_year) do |f| %>
+  <% if @country_year.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@country_year.errors.count, "error") %> prohibited this country_year from being saved:</h2>
+
+      <ul>
+      <% @country_year.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :emission %><br />
+    <%= f.text_field :emission %>
+  </div>
+  <div class="field">
+    <%= f.label :sufficiency %><br />
+    <%= f.text_field :sufficiency %>
+  </div>
+  <div class="field">
+    <%= f.label :area_habitats %><br />
+    <%= f.text_field :area_habitats %>
+  </div>
+  <div class="field">
+    <%= f.label :area_habitats_percent %><br />
+    <%= f.text_field :area_habitats_percent %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
