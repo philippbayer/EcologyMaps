@@ -1,17 +1,34 @@
+<!DOCTYPE html>
 <html lang="en">
 	<head>
+		<style type="text/css" media="screen"> 
+		body {
+			background: #333;
+			color: #fff;
+			font: 300 100.1% "Helvetica Neue", Helvetica, "Arial Unicode MS", Arial, sans-serif;
+		}
+		#holder {
+			height: 480px;
+			left: 50%;
+			margin: -240px 0 0 -320px;
+			position: absolute;
+			top: 50%;
+			width: 640px;
+		}
+		</style>
+	
 		<title>Minimal Example</title>
-		<div id="paper"></div>
 		<script src="raphael.js"></script> 
 		<script src="europe.js"></script>
 		<script>
 		window.onload = function () {
-			var paper = Raphael(europe).translate(842,595);
+			var r = Raphael(europe,842,595);
 		};
 		</script>
 	</head>
 	<body>
 		<div id="holder"></div>
+		<p id="copy">Demo of europe</p>
 	</body>
 </html>
 
