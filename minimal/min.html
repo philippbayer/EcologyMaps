@@ -44,29 +44,41 @@
 			var r3 = Raphael(europeEight, 842,595);
 			r3.hide();
 			targets[0].mouseover( function () {
-				// Now load 2010
-			    r2.hide();
-				r3.hide();
+				// 2010
+				// Change color of button in steps of 1000
+				this.animate({fill: "#000"},1000,"<");
+				// Show our map, hide the others
 				r.show();
+				r2.hide();
+				r3.hide();
+				// Set the other button's colors to default
+				targets[1].animate({fill:"#ccc"},1000,"<");
+				targets[2].animate({fill:"#ccc"},1000,"<");
 			});
 			targets[1].mouseover( function () {
-				// Now load 2009
-				r3.hide();
-				r.hide();
+				// 2009
+				this.animate({fill: "#000"},1000,"<");
 				r2.show();
+				r.hide();
+				r3.hide();
+				targets[2].animate({fill:"#ccc"},1000,"<");
+				targets[0].animate({fill:"#ccc"},1000,"<");
 			});
 			targets[2].mouseover( function () {
-				// Now load 2008
+				// 2008
+				this.animate({fill: "#000"},1000,"<");
+				r3.show();
 				r.hide();
 				r2.hide();
-				r3.show();
+				targets[0].animate({fill:"#ccc"},1000,"<");
+				targets[1].animate({fill:"#ccc"},1000,"<");
 			});
 		};
 		</script>
 	</head>
 	<body>
 		<div id="holder"></div>
-		<p id="copy">Demo of europe</p>
+		<p id="copy">It's the final countdown! didudiduuuuuuu didudididi</p>
 	</body>
 </html>
 
