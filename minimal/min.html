@@ -24,9 +24,43 @@
 		<script src="europeEight.js"></script>
 		<script>
 		window.onload = function () {
-			var r = Raphael(europeTen,842,595);
-			//var r2 = Raphael(europeNine,842,595);
-			//var r3 = Raphael(europeEight, 842,595);
+			// Now comes button-stuff
+			var myr = Raphael("holder",800,500);
+			var targets = myr.set();
+			targets.push(myr.circle(500,100,30),
+						 myr.circle(500,200,30),
+						 myr.circle(500,300,30));
+		    targets.attr({fill:"#ccc", stroke:"#fff"});
+			var labels = myr.set();
+			labels.push(myr.text(550,100, "2010"),
+						myr.text(550,200,"2009"),
+						myr.text(550,300,"2008"));
+			labels.attr({font:"12px Fontin-Sans, Arial", fill:"#fff","text-anchor":"start"});
+            // Now we've drawn the buttons and their text
+			var	r = Raphael(europeTen,842,595);
+			r.hide();
+			var r2 = Raphael(europeNine,842,595);
+			r2.hide();
+			var r3 = Raphael(europeEight, 842,595);
+			r3.hide();
+			targets[0].mouseover( function () {
+				// Now load 2010
+			    r2.hide();
+				r3.hide();
+				r.show();
+			});
+			targets[1].mouseover( function () {
+				// Now load 2009
+				r3.hide();
+				r.hide();
+				r2.show();
+			});
+			targets[2].mouseover( function () {
+				// Now load 2008
+				r.hide();
+				r2.hide();
+				r3.show();
+			});
 		};
 		</script>
 	</head>
