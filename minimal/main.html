@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<style type="text/css"> 
+.mine { height: 650px; width: 900px; margin: auto }
+.mine img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
+.nav { margin: 5px 0 }
+#nav a, #s7 strong { margin: 0 5px; padding: 3px 5px; border: 1px solid #ccc; background: #fc0; text-decoration: none }
+#nav a.activeSlide { background: #ea0 }
+#nav a:focus { outline: none; }
+#output { text-align: left; }
+</style> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.mine').cycle({
+		fx: 'fade',
+		timeout: 0,
+		next: '#next2',
+		prev: '#prev2'
+	});
+});
+</script>
+</head>
+<body>
+<div id="s1" class="mine">
+	<iframe src="2003.html" width="100%" height="100%" frameborder="0">yourbrowsersucks</iframe>
+	<iframe src="2.html" width="100%" height="100%" frameborder="0">yousuck</iframe>
+</div>
+<div class="nav"><a id="prev2" href="#">Prev</a> <a id="next2" href="#">Next</a></div>
+</body>
+</html>
