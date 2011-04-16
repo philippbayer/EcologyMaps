@@ -54,3 +54,32 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+.content table{
+ width:100%;
+ font-size:small;
+ border-collapse: collapse;
+ margin-top:5px;
+ margin-bottom:15px;
+}
+
+.content td {
+ padding: 3px;
+}
+
+.content a {
+ color:#3333CC;
+}
+
+.tabhead {
+ background-color: #555555;
+ color:white;
+}
+
+.tabeven {
+ background-color: #DDDDDD;
+}
+
+.tabodd {
+ background-color: #EEEEEE;
+}

@@ -1,8 +1,9 @@
 <h1>Listing country_years</h1>
 
 <table>
-  <tr>
-    <th>Number</th>
+  <tr class="tabhead">
+	<th>Country</th>
+    <th>Year</th>
     <th>Emission</th>
     <th>Sufficiency</th>
     <th>Area habitats</th>
@@ -13,11 +14,12 @@
   </tr>
 
 <% @country_years.each do |country_year| %>
-  <tr>
+  <tr class="<%= cycle("tabeven","tabodd") %>">
+	<td><%= country_year.country.name%>
     <td><%= country_year.number %></td>
     <td><%= country_year.emission %></td>
     <td><%= country_year.sufficiency %></td>
-    <td><%= country_year.area_habitats %></td>
+    <td><%= country_year.area_habitats_scaled %></td>
     <td><%= country_year.area_habitats_percent %></td>
     <td><%= link_to 'Show', country_year %></td>
     <td><%= link_to 'Edit', edit_country_year_path(country_year) %></td>
