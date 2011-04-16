@@ -1,11 +1,12 @@
 class CreateCountryYears < ActiveRecord::Migration
   def self.up
     create_table :country_years do |t|
+      t.belongs_to :country
       t.string :number
-      t.float :emission
-      t.float :sufficiency
-      t.float :area_habitats
-      t.float :area_habitats_percent
+      t.string :emission
+      t.string :sufficiency
+      t.string :area_habitats_scaled
+      t.string :area_habitats_percent
 
       t.timestamps
     end
