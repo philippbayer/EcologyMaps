@@ -29,8 +29,8 @@ namespace :app do
 
     lines.each do |line|
       if line["Short"] == nil
-        line.chop
-        line_array = line.split(",")
+        line
+        line_array = line.split(";")
         hash[line_array.at(0)] = line_array[1..-1]
       end
     end
