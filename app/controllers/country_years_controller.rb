@@ -14,6 +14,7 @@ class CountryYearsController < ApplicationController
   # GET /country_years/1.xml
   def show
     @country_year = CountryYear.find(params[:id])
+    @last_year = @country_year.country.country_years.find_by_number(@country_year.number.to_i-1)
 
     respond_to do |format|
       format.html # show.html.erb
