@@ -6,7 +6,7 @@
 </h1>
 
 <p>
-  <b>Emissions (in thousand tons CO2-Equivalents):</b>
+  <img src="/images/gas_icon.png"> <b>Emissions (in thousand tons CO2-Equivalents):</b>
   <%= @country_year.emission %>
   <% if @country_year.emission < @last_year.emission %> 
   <font color="green"> (+)</font>
@@ -18,7 +18,7 @@
 </p>
 
 <p>
-  <b>Sufficiency of habitats:</b>
+  <img src="/images/percent_icon.png"> <b>Sufficiency of habitats:</b>
   <%= @country_year.sufficiency %>%
   <% if @country_year.sufficiency > @last_year.sufficiency %> 
   <font color="green"> (+)</font>
@@ -30,7 +30,7 @@
 </p>
 
 <p>
-  <b>Area habitats (percent):</b>
+  <img src="/images/area_icon.png"> <b>Area habitats (percent):</b>
   <%= @country_year.area_habitats_percent %>%
   <% if @country_year.area_habitats_percent > @last_year.area_habitats_percent %> 
   <font color="green"> (+)</font>
@@ -42,7 +42,7 @@
 </p>
 
 <p>
-  <b>Area habitats (scaled):</b>
+  <img src="/images/scaled_icon.png"> <b>Area habitats (scaled):</b>
   <%= @country_year.area_habitats_scaled %>
 </p>
 
