@@ -3,6 +3,7 @@ class CreateCountries < ActiveRecord::Migration
     create_table :countries do |t|
       t.string :handle
       t.string :name
+      t.string :area
       t.float :emission_target
 
       t.timestamps
