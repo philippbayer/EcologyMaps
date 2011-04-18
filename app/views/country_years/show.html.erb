@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
-
+<% country_image = "/images/"+@country_year.country.handle+".png" %>
+<%= image_tag country_image, :align => "left" %>
 <h1>
 <%=@country_year.country.name %> 
 (<%=@country_year.number%>)
 </h1>
-
 <p>
   <img src="/images/gas_icon.png"> <b>Emissions (in thousand tons CO2-Equivalents):</b>
   <%= @country_year.emission %>
   <% if @country_year.emission < @last_year.emission %> 
-  <font color="green"> (+)</font>
+  <b><font color="green"> (+)</font></b>
   <% elsif @country_year.emission > @last_year.emission %>
-  <font color="red"> (-)</font>
+  <font color="red"> (-)</font></b>
   <% elsif @country_year.emission = @last_year.emission %>
-  <font color="gray"> (o)</font>
+  <b><font color="gray"> (o)</font></b>
   <% end %>
 </p>
 
@@ -21,11 +21,11 @@
   <img src="/images/percent_icon.png"> <b>Sufficiency of habitats:</b>
   <%= @country_year.sufficiency %>%
   <% if @country_year.sufficiency > @last_year.sufficiency %> 
-  <font color="green"> (+)</font>
+  <b><b><font color="green"> (+)</font></b>
   <% elsif @country_year.sufficiency < @last_year.sufficiency %>
-  <font color="red"> (-)</font>
+  <b><font color="red"> (-)</font></b>
   <% elsif @country_year.sufficiency = @last_year.sufficiency %>
-  <font color="gray"> (o)</font>
+  <b><font color="gray"> (o)</font></b>
   <% end %>
 </p>
 
@@ -33,11 +33,11 @@
   <img src="/images/area_icon.png"> <b>Area habitats (percent):</b>
   <%= @country_year.area_habitats_percent %>%
   <% if @country_year.area_habitats_percent > @last_year.area_habitats_percent %> 
-  <font color="green"> (+)</font>
+  <b><font color="green"> (+)</font></b>
   <% elsif @country_year.area_habitats_percent < @last_year.area_habitats_percent %>
-  <font color="red"> (-)</font>
+  <font color="red"> (-)</font></b>
   <% elsif @country_year.area_habitats_percent = @last_year.area_habitats_percent %>
-  <font color="gray"> (o)</font>
+  <font color="gray"> (o)</font></b>
   <% end %>
 </p>
 
