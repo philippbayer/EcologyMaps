@@ -22,8 +22,8 @@ namespace :app do
   end
   
   
-  def csv_parser
-    csvfile = File.open("/Users/bastian/Documents/open_data_ecology/EcologyMaps/data/areadata_input.csv", "r")
+  def csv_parser(infile)
+    csvfile = File.open(infile, "r")
     lines = csvfile.readlines
     hash = {}
 
