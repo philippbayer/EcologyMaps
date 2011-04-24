@@ -47,5 +47,30 @@
 </p>
 
 
-<%= link_to 'Edit', edit_country_year_path(@country_year) %> |
-<%= link_to 'Back', country_years_path %>
+<h2>Endangered species, assesst in this year</h2>
+
+<table>
+  <tr class="tabhead">
+	<th>Scientific name</th>
+    <th>Common name</th>
+    <th>Category</th>
+    <th>Trend</th>
+    <th>Information at IUCN RedList</th>
+  </tr>
+
+<% @country_year.animal_joins.each do |animal_joins| %>
+  <tr class="<%= cycle("tabeven","tabodd") %>">
+	<td><%= animal_joins.animal.name%>
+    <td><%= animal_joins.animal.common %></td>
+    <td><%= animal_joins.animal.category %></td>
+    <td><%= animal_joins.animal.trend %></td>
+    <td><%= link_to 'IUCN', animal_joins.animal.link %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to @last_year.number,@last_year%> | <%= link_to 'Edit', edit_country_year_path(@country_year) %> |
+<%= link_to 'Back', country_years_path %> | <%= link_to @next_year.number,@next_year%>

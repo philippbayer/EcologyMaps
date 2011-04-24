@@ -20,6 +20,12 @@ class CountryYearsController < ApplicationController
       @last_year = @country_year
     end
     
+    if @country_year.country.country_years.find_by_number(@country_year.number.to_i+1) != nil
+      @next_year = @country_year.country.country_years.find_by_number(@country_year.number.to_i+1)
+    else
+      @next_year = @country_year
+    end
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @country_year }
