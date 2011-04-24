@@ -6,7 +6,8 @@ class AddStartData < ActiveRecord::Migration
       new_country = Country.new()
       new_country.handle = key
       new_country.name = value[0]
-      new_country.area = value[-1]
+      area = value[-1].strip()
+      new_country.area = area
       new_country.save
       new_country = Country.find_by_name(value[0])
 

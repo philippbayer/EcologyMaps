@@ -8,7 +8,7 @@ class PopulateAnimals < ActiveRecord::Migration
       new_animal.common = value[0]
       new_animal.category = value[1]
       new_animal.trend = value[2]
-      new_animal.link = value[3]
+      new_animal.link = value[3].strip()
       new_animal.save
     end
   end
