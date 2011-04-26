@@ -59,7 +59,7 @@ for maxVal in yearsMaxArray:
 	# now multiply this with every value
 	for country in lineArray:
 		if is_number(country[i+2]):
-			print country[1], ":", float(country[i+2])*convert,":",1-float(country[i+2])*convert
+			print country[1], ":", float(country[i+2])*convert*255,":",(1-float(country[i+2])*convert)*255
 	i += 1
 	b -= 1
 
@@ -71,6 +71,6 @@ while i <= 9:
 	print b
 	for country in lineArray:
 		if is_number(country[i]):
-			print country[1], ":", float(country[i])*convert,":", 1-float(country[i])*convert
+			print country[1], ":", float(country[i])*convert*255,":", (1-float(country[i])*convert)*255
 	i += 1
 	b -= 1
