@@ -60,7 +60,7 @@
 
 <% @country_year.animal_joins.each do |animal_joins| %>
   <tr class="<%= cycle("tabeven","tabodd") %>">
-	<td><%= animal_joins.animal.name%>
+	<td><i><%= animal_joins.animal.name%></i></td>
     <td><%= animal_joins.animal.common %></td>
     <td><%= animal_joins.animal.category %></td>
     <td><%= animal_joins.animal.trend %></td>
