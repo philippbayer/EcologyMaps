@@ -10,21 +10,41 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110408092616) do
+ActiveRecord::Schema.define(:version => 20110424123300) do
+
+  create_table "animal_joins", :force => true do |t|
+    t.integer  "country_year_id"
+    t.integer  "animal_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "animals", :force => true do |t|
+    t.string   "name"
+    t.string   "common"
+    t.string   "trend"
+    t.string   "category"
+    t.string   "link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "countries", :force => true do |t|
+    t.string   "handle"
     t.string   "name"
+    t.string   "area"
     t.float    "emission_target"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "country_years", :force => true do |t|
+    t.integer  "country_id"
     t.string   "number"
-    t.float    "emission"
-    t.float    "sufficiency"
-    t.float    "area_habitats"
-    t.float    "area_habitats_percent"
+    t.string   "emission"
+    t.string   "sufficiency"
+    t.string   "area_habitats_scaled"
+    t.string   "area_habitats_percent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

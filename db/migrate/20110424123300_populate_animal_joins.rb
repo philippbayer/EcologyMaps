@@ -1,6 +1,6 @@
 class PopulateAnimalJoins < ActiveRecord::Migration
   def self.up
-    data = csv_parser("/Users/bastian/Documents/open_data_ecology/EcologyMaps/data/animal_data_transposed.csv")
+    data = csv_parser("/home/drsnuggles/Rails/euromap/data/animal_data_transposed.csv")
 
     data.each_pair do |key, value|
       handledate = key.split("_")

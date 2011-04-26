@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<% country_image = "/images/"+@country_year.country.handle+".png" %>
+<% country_image = "/images/" + @country_year.country.handle.downcase+".png" %>
 <%= image_tag country_image, :align => "left" %>
 <h1>
 <%=@country_year.country.name %> 
@@ -47,7 +47,7 @@
 </p>
 
 
-<h2>Endangered species, assesst in this year</h2>
+<h2>Endangered species, assessed in this year</h2>
 
 <table>
   <tr class="tabhead">
