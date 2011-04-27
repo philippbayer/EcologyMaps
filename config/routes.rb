@@ -1,6 +1,6 @@
 Euromap::Application.routes.draw do
   resources :country_years
-
+  resources :years
   resources :countries
 
   # The priority is based upon order of creation:

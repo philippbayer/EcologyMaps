@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<% country_image = "/images/"+@country_year.country.handle+".png" %>
+<% country_image = "/images/" + @country_year.country.handle.downcase+".png" %>
 <%= image_tag country_image, :align => "left" %>
 <h1>
 <%=@country_year.country.name %> 
@@ -47,7 +47,7 @@
 </p>
 
 
-<h2>Endangered species, assesst this year</h2>
+<h2>Endangered species, assessed in this year</h2>
 
 <table>
   <tr class="tabhead">
@@ -60,7 +60,7 @@
 
 <% @country_year.animal_joins.each do |animal_joins| %>
   <tr class="<%= cycle("tabeven","tabodd") %>">
-	<td><%= animal_joins.animal.name%>
+	<td><i><%= animal_joins.animal.name%></i></td>
     <td><%= animal_joins.animal.common %></td>
     <td><%= animal_joins.animal.category %></td>
     <td><%= animal_joins.animal.trend %></td>
