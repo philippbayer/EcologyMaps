@@ -8,30 +8,35 @@
 <p>
   <img src="/images/gas_icon.png"> <b>Emissions (in thousand tons CO2-Equivalents):</b>
   <%= @country_year.emission %>
+  <a onmouseover="showWMTT('1')" onmouseout="hideWMTT()" href="#">
   <% if @country_year.emission < @last_year.emission %> 
-  <b><font color="green"> (+)</font></b>
+	<b><font color="green"> (+)</font></b>
   <% elsif @country_year.emission > @last_year.emission %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.emission = @last_year.emission %>
   <b><font color="gray"> (o)</font></b>
   <% end %>
+	</a>
 </p>
 
 <p>
   <img src="/images/percent_icon.png"> <b>Sufficiency of habitats:</b>
   <%= @country_year.sufficiency %>%
-  <% if @country_year.sufficiency > @last_year.sufficiency %> 
+  <a onmouseover="showWMTT('2')" onmouseout="hideWMTT()" href="#">
+  <% if @country_year.sufficiency.to_i > @last_year.sufficiency.to_i %> 
   <b><font color="green"> (+)</font></b>
-  <% elsif @country_year.sufficiency < @last_year.sufficiency %>
+  <% elsif @country_year.sufficiency.to_i < @last_year.sufficiency.to_i %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.sufficiency = @last_year.sufficiency %>
   <b><font color="gray"> (o)</font></b>
   <% end %>
+  </a>
 </p>
 
 <p>
   <img src="/images/area_icon.png"> <b>Area of habitats (percent):</b>
   <%= @country_year.area_habitats_percent %>%
+  <a onmouseover="showWMTT('3')" onmouseout="hideWMTT()" href="#">
   <% if @country_year.area_habitats_percent > @last_year.area_habitats_percent %> 
   <b><font color="green"> (+)</font></b>
   <% elsif @country_year.area_habitats_percent < @last_year.area_habitats_percent %>
@@ -39,6 +44,7 @@
   <% elsif @country_year.area_habitats_percent = @last_year.area_habitats_percent %>
   <b><font color="gray"> (o)</font></b>
   <% end %>
+  </a>
 </p>
 
 <p>
@@ -74,3 +80,31 @@
 
 <%= link_to @last_year.number,@last_year%> | <%= link_to 'Edit', edit_country_year_path(@country_year) %> |
 <%= link_to 'Back', country_years_path %> | <%= link_to @next_year.number,@next_year%>
+
+<script type="text/javascript">
+<!--
+wmtt = null;
+document.onmousemove = updateWMTT;
+function updateWMTT(e) {
+  if (wmtt != null && wmtt.style.display == 'block') {
+    x = (e.pageX ? e.pageX : window.event.x) + wmtt.offsetParent.scrollLeft - wmtt.offsetParent.offsetLeft;
+    y = (e.pageY ? e.pageY : window.event.y) + wmtt.offsetParent.scrollTop - wmtt.offsetParent.offsetTop;
+    wmtt.style.left = (x + 20) + "px";
+    wmtt.style.top   = (y + 20) + "px";
+  }
+}
+function showWMTT(id) {
+  wmtt = document.getElementById(id);
+  wmtt.style.display = "block";
+}
+function hideWMTT() {
+  wmtt.style.display = "none";
+}
+-->
+</script>
+
+
+
+<div id="1" class="tooltip"> <%= @country_year.emission.to_i - @last_year.emission.to_i %> emissions to last year</div>
+<div id="2" class="tooltip"> <%= @country_year.sufficiency.to_i - @last_year.sufficiency.to_i %> sufficiency to last year</div>
+<div id="3" class="tooltip"> <%= @country_year.area_habitats_percent.to_i - @last_year.area_habitats_percent.to_i %> % of habitats to last year</div>

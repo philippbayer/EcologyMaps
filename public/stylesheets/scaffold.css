@@ -83,3 +83,11 @@ div.field, div.actions {
 .tabodd {
  background-color: #EEEEEE;
 }
+
+<!--
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: #EEEEEE;
+}
+-->
