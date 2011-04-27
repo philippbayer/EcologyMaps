@@ -11,7 +11,7 @@
   <% if @country_year.emission < @last_year.emission %> 
   <b><font color="green"> (+)</font></b>
   <% elsif @country_year.emission > @last_year.emission %>
-  <font color="red"> (-)</font></b>
+  <b><font color="red"> (-)</font></b>
   <% elsif @country_year.emission = @last_year.emission %>
   <b><font color="gray"> (o)</font></b>
   <% end %>
@@ -21,7 +21,7 @@
   <img src="/images/percent_icon.png"> <b>Sufficiency of habitats:</b>
   <%= @country_year.sufficiency %>%
   <% if @country_year.sufficiency > @last_year.sufficiency %> 
-  <b><b><font color="green"> (+)</font></b>
+  <b><font color="green"> (+)</font></b>
   <% elsif @country_year.sufficiency < @last_year.sufficiency %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.sufficiency = @last_year.sufficiency %>
@@ -30,24 +30,24 @@
 </p>
 
 <p>
-  <img src="/images/area_icon.png"> <b>Area habitats (percent):</b>
+  <img src="/images/area_icon.png"> <b>Area of habitats (percent):</b>
   <%= @country_year.area_habitats_percent %>%
   <% if @country_year.area_habitats_percent > @last_year.area_habitats_percent %> 
   <b><font color="green"> (+)</font></b>
   <% elsif @country_year.area_habitats_percent < @last_year.area_habitats_percent %>
-  <font color="red"> (-)</font></b>
+  <b><font color="red"> (-)</font></b>
   <% elsif @country_year.area_habitats_percent = @last_year.area_habitats_percent %>
-  <font color="gray"> (o)</font></b>
+  <b><font color="gray"> (o)</font></b>
   <% end %>
 </p>
 
 <p>
-  <img src="/images/scaled_icon.png"> <b>Area habitats (scaled):</b>
+  <img src="/images/scaled_icon.png"> <b>Area of habitats (scaled):</b>
   <%= @country_year.area_habitats_scaled %>
 </p>
 
 
-<h2>Endangered species, assesst in this year</h2>
+<h2>Endangered species, assesst this year</h2>
 
 <table>
   <tr class="tabhead">
@@ -55,7 +55,7 @@
     <th>Common name</th>
     <th>Category</th>
     <th>Trend</th>
-    <th>Information at IUCN RedList</th>
+    <th>Links</th>
   </tr>
 
 <% @country_year.animal_joins.each do |animal_joins| %>
@@ -64,7 +64,7 @@
     <td><%= animal_joins.animal.common %></td>
     <td><%= animal_joins.animal.category %></td>
     <td><%= animal_joins.animal.trend %></td>
-    <td><%= link_to 'IUCN', animal_joins.animal.link %></td>
+    <td><%= link_to 'Details at IUCN RedList', animal_joins.animal.link %></td>
   </tr>
 <% end %>
 </table>
