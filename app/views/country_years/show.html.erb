@@ -9,12 +9,17 @@
   <img src="/images/gas_icon.png"> <b>Emissions (in thousand tons CO2-Equivalents):</b>
   <%= @country_year.emission %>
   <a onmouseover="showWMTT('1')" onmouseout="hideWMTT()" href="#">
+  <% if @last_year.emission == "-"%>
+  <b><font color="gray"> (o)</font></b>
+  <%elsif @country_year.emission == "-"%>
+  <%else%>
   <% if @country_year.emission < @last_year.emission %> 
 	<b><font color="green"> (+)</font></b>
   <% elsif @country_year.emission > @last_year.emission %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.emission = @last_year.emission %>
   <b><font color="gray"> (o)</font></b>
+  <% end %>
   <% end %>
 	</a>
 </p>
@@ -23,12 +28,17 @@
   <img src="/images/percent_icon.png"> <b>Sufficiency of habitats:</b>
   <%= @country_year.sufficiency %>%
   <a onmouseover="showWMTT('2')" onmouseout="hideWMTT()" href="#">
+  <% if @last_year.sufficiency == "-"%>
+  <b><font color="gray"> (o)</font></b>
+  <%elsif @country_year.sufficiency == "-"%>
+  <%else%>
   <% if @country_year.sufficiency.to_i > @last_year.sufficiency.to_i %> 
   <b><font color="green"> (+)</font></b>
   <% elsif @country_year.sufficiency.to_i < @last_year.sufficiency.to_i %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.sufficiency = @last_year.sufficiency %>
   <b><font color="gray"> (o)</font></b>
+  <% end %>
   <% end %>
   </a>
 </p>
@@ -37,12 +47,17 @@
   <img src="/images/area_icon.png"> <b>Area of habitats (percent):</b>
   <%= @country_year.area_habitats_percent %>%
   <a onmouseover="showWMTT('3')" onmouseout="hideWMTT()" href="#">
+  <% if @last_year.area_habitats_percent == "-"%>
+  <b><font color="gray"> (o)</font></b>
+  <%elsif @country_year.area_habitats_percent == "-"%>
+  <%else%>
   <% if @country_year.area_habitats_percent > @last_year.area_habitats_percent %> 
   <b><font color="green"> (+)</font></b>
   <% elsif @country_year.area_habitats_percent < @last_year.area_habitats_percent %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.area_habitats_percent = @last_year.area_habitats_percent %>
   <b><font color="gray"> (o)</font></b>
+  <% end %>
   <% end %>
   </a>
 </p>
@@ -52,9 +67,8 @@
   <%= @country_year.area_habitats_scaled %>
 </p>
 
-
+<% if @country_year.animal_joins != [] %>
 <h2>Endangered species, assessed in this year</h2>
-
 <table>
   <tr class="tabhead">
 	<th>Scientific name</th>
@@ -70,11 +84,15 @@
     <td><%= animal_joins.animal.common %></td>
     <td><%= animal_joins.animal.category %></td>
     <td><%= animal_joins.animal.trend %></td>
-    <td><%= link_to 'Details at IUCN RedList', animal_joins.animal.link %></td>
+    <td><%= link_to 'Details at IUCN RedList', animal_joins.animal.link %> <a href="http://www.google.com/#q=<%=animal_joins.animal.name%>"><img src="/images/google.png"></a> <a href="http://en.wikipedia.org/w/index.php?title=Special%20Search&search=<%=animal_joins.animal.name%>"><img src="/images/wiki.ico"></a> </td>
   </tr>
 <% end %>
 </table>
 
+<%else%>
+<h2>No endangered species where assessed in this year</h2>
+
+<%end%>
 <br />
 
 
@@ -106,28 +124,39 @@ function hideWMTT() {
 
 
 <div id="1" class="tooltip"> 
+<% if @last_year.emission == "-"%>
+There is no data available for the last year
+<%else%>
 <% emissions = @country_year.emission.to_i - @last_year.emission.to_i %> 
 <% if emissions > 0 %>
-+<%= emissions %> emissions to last year
++<%= emissions %> thousand tons of emissions to last year
 <% elsif emissions < 0 %>
-<%= emissions %> emissions to last year
+<%= emissions %> thousand tons of emissions to last year
 <% elsif emissions == 0%>
 No change in emissions to last year
+<%end%>
 <%end%>
 </div>
 
 <div id="2" class="tooltip">
+<% if @last_year.sufficiency == "-"%>
+There is no data available for the last year
+<%else%>
 <% sufficiency = @country_year.sufficiency.to_i - @last_year.sufficiency.to_i %> 
 <% if sufficiency > 0 %>
-+<%= sufficiency %> sufficiency to last year
++<%= sufficiency %>% sufficiency to last year
 <% elsif sufficiency < 0 %>
-<%= sufficiency %> sufficiency to last year
+<%= sufficiency %>% sufficiency to last year
 <% elsif sufficiency == 0%>
 No change in sufficiency to last year
+<%end%>
 <%end%>
 </div>
 
 <div id="3" class="tooltip">
+<% if @last_year.area_habitats_percent == "-"%>
+There is no data available for the last year
+<%else%>
 <% area_habitats_percent = @country_year.area_habitats_percent.to_i - @last_year.area_habitats_percent.to_i %> 
 <% if area_habitats_percent > 0 %>
 +<%= area_habitats_percent %> % habitats to last year
@@ -135,5 +164,6 @@ No change in sufficiency to last year
 <%= area_habitats_percent %> % habitats to last year
 <% elsif area_habitats_percent == 0%>
 No change in area of habitats to last year
+<%end%>
 <%end%>
 </div>
