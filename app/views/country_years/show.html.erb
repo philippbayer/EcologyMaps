@@ -89,8 +89,8 @@ function updateWMTT(e) {
   if (wmtt != null && wmtt.style.display == 'block') {
     x = (e.pageX ? e.pageX : window.event.x) + wmtt.offsetParent.scrollLeft - wmtt.offsetParent.offsetLeft;
     y = (e.pageY ? e.pageY : window.event.y) + wmtt.offsetParent.scrollTop - wmtt.offsetParent.offsetTop;
-    wmtt.style.left = (x + 20) + "px";
-    wmtt.style.top   = (y + 20) + "px";
+    wmtt.style.left = (x + 30) + "px";
+    wmtt.style.top   = (y + 30) + "px";
   }
 }
 function showWMTT(id) {
@@ -105,6 +105,35 @@ function hideWMTT() {
 
 
 
-<div id="1" class="tooltip"> <%= @country_year.emission.to_i - @last_year.emission.to_i %> emissions to last year</div>
-<div id="2" class="tooltip"> <%= @country_year.sufficiency.to_i - @last_year.sufficiency.to_i %> sufficiency to last year</div>
-<div id="3" class="tooltip"> <%= @country_year.area_habitats_percent.to_i - @last_year.area_habitats_percent.to_i %> % of habitats to last year</div>
+<div id="1" class="tooltip"> 
+<% emissions = @country_year.emission.to_i - @last_year.emission.to_i %> 
+<% if emissions > 0 %>
++<%= emissions %> emissions to last year
+<% elsif emissions < 0 %>
+<%= emissions %> emissions to last year
+<% elsif emissions == 0%>
+No change in emissions to last year
+<%end%>
+</div>
+
+<div id="2" class="tooltip">
+<% sufficiency = @country_year.sufficiency.to_i - @last_year.sufficiency.to_i %> 
+<% if sufficiency > 0 %>
++<%= sufficiency %> sufficiency to last year
+<% elsif sufficiency < 0 %>
+<%= sufficiency %> sufficiency to last year
+<% elsif sufficiency == 0%>
+No change in sufficiency to last year
+<%end%>
+</div>
+
+<div id="3" class="tooltip">
+<% area_habitats_percent = @country_year.area_habitats_percent.to_i - @last_year.area_habitats_percent.to_i %> 
+<% if area_habitats_percent > 0 %>
++<%= area_habitats_percent %> % habitats to last year
+<% elsif area_habitats_percent < 0 %>
+<%= area_habitats_percent %> % habitats to last year
+<% elsif area_habitats_percent == 0%>
+No change in area of habitats to last year
+<%end%>
+</div>
