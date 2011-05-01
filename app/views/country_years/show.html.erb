@@ -1,6 +1,7 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p><div align="left">
 <% country_image = "/images/" + @country_year.country.handle.downcase+".png" %>
 <%= image_tag country_image, :align => "left" %>
+</div>
 <h1>
 <%=@country_year.country.name %> 
 (<%=@country_year.number%>)
@@ -90,7 +91,7 @@
 </table>
 
 <%else%>
-<h2>No endangered species where assessed in this year</h2>
+<h2>No endangered species were assessed in this year</h2>
 
 <%end%>
 <br />
@@ -120,7 +121,6 @@ function hideWMTT() {
 }
 -->
 </script>
-
 
 
 <div id="1" class="tooltip"> 
