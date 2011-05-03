@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+<head>
+	<title>Minimal map-test</title>
+	<script type="text/javascript" src="jquery-1.4.2.min.js"></script> 
+	<script type="text/javascript" src="jquery.maphilight.min.js"></script> 
+	<script>$(function() {
+		$.fn.maphilight.defaults = {
+			fill: true,
+			fillColor: 'ffffff',
+			fillOpacity: 1,
+			stroke: true,
+			strokeColor: '000000',
+			strokeOpacity: 1,
+			strokeWidth: 1,
+			fade: true,
+			alwaysOn: false,
+			neverOn: false,
+			groupBy: false
+		};
+		$('.map').maphilight();
+	});</script>
+</head>
+<p>
+  <b>Year:</b>
+  <%= @year.year %>
+</p>
+
+<%=form_tag :action => "show" do%> 
+<p>
+  <b>Emission target:</b>
+<%= imagemapper %>
+</p>
+<%end%>
+<%= link_to 'Edit', edit_country_path(@year) %> |
+<%= link_to 'Back', countries_path %>

@@ -1,6 +1,6 @@
 class AddStartData < ActiveRecord::Migration
   def self.up
-    data = csv_parser("/home/drsnuggles/Rails/euromap/data/areadata_input.csv")
+    data = csv_parser(RAILS_ROOT + "/data/areadata_input.csv")
 
     data.each_pair do |key, value|
       new_country = Country.new()

@@ -1,6 +1,6 @@
 class PopulateAnimals < ActiveRecord::Migration
   def self.up
-    data = csv_parser("/home/drsnuggles/Rails/euromap/data/animal_data_details.csv")
+    data = csv_parser(RAILS_ROOT + "/data/animal_data_details.csv")
 
     data.each_pair do |key, value|
       new_animal = Animal.new()

@@ -1,6 +1,6 @@
 class AddYearsData < ActiveRecord::Migration
   def self.up
-	  data = csv_parser("/home/drsnuggles/Rails/euromap/data/years.csv")
+	  data = csv_parser(RAILS_ROOT + "/data/years.csv")
 
 	  data.each_pair do |key, value|
 		  newyear = Year.new()
