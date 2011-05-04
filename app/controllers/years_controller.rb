@@ -1,5 +1,7 @@
 class YearsController < ApplicationController
   def index
+	@years = Year.all
+
     respond_to do |format|
       format.html # index.html.erb
     end

@@ -25,11 +25,9 @@
   <%= @year.year %>
 </p>
 
-<%=form_tag :action => "show" do%> 
+<%= raw @year.imagemap %>
 <p>
   <b>Emission target:</b>
 <%= imagemapper %>
 </p>
 <%end%>
-<%= link_to 'Edit', edit_country_path(@year) %> |
-<%= link_to 'Back', countries_path %>
