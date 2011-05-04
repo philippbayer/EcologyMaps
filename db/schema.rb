@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(:version => 20110503125737) do
     t.string   "trend"
     t.string   "category"
     t.string   "link"
+    t.string   "image_license"
+    t.string   "image_link"
+    t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

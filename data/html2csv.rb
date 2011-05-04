@@ -13,8 +13,6 @@ directory.each do |d|
 		toparse.each_line do |line|
 			# does it have the desirable html-tags?
 			if line.include?("<img") or line.include?("<map") or line.include?("<area") or line.include?("</img") or line.include?("</map") or line.include?("</area")
-				# replace pesky linebreaks
-				line = line.sub("\n","") + " "
 				yearstring += line
 			end
 		end
