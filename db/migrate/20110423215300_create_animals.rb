@@ -9,6 +9,7 @@ class CreateAnimals < ActiveRecord::Migration
       t.string :image_license
       t.string :image_link
       t.string :author
+      t.string :author_link
 
       t.timestamps
     end
