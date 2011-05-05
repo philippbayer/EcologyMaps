@@ -1,33 +1,15 @@
-<p id="notice"><%= notice %></p>
-<head>
-	<title>Minimal map-test</title>
-	<script type="text/javascript" src="jquery-1.4.2.min.js"></script> 
-	<script type="text/javascript" src="jquery.maphilight.min.js"></script> 
-	<script>$(function() {
-		$.fn.maphilight.defaults = {
-			fill: true,
-			fillColor: 'ffffff',
-			fillOpacity: 1,
-			stroke: true,
-			strokeColor: '000000',
-			strokeOpacity: 1,
-			strokeWidth: 1,
-			fade: true,
-			alwaysOn: false,
-			neverOn: false,
-			groupBy: false
-		};
-		$('.map').maphilight();
-	});</script>
-</head>
+<center>
 <p>
-  <b>Year:</b>
-  <%= @year.year %>
+<% if @year.year != @last_year.year %>
+Previous Year: <%= link_to(@last_year.year, @last_year) %> 
+<% end %>
+
+Year: <b><%= @year.year %></b>
+
+<% if @year.year != @next_year.year %>
+Next Year: <%= link_to(@next_year.year, @next_year) %>
+<% end %>
 </p>
 
 <%= raw @year.imagemap %>
-<p>
-  <b>Emission target:</b>
-<%= imagemapper %>
-</p>
-<%end%>
+</center>
