@@ -91,3 +91,6 @@ div.field, div.actions {
   background-color: #EEEEEE;
 }
 -->
+
+.hiddenbar {display:none} 
+.shownbar {display:inline}
