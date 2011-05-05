@@ -28,10 +28,7 @@ ActiveRecord::Schema.define(:version => 20110504085000) do
     t.string   "image_license"
     t.string   "image_link"
     t.string   "author"
-<<<<<<< HEAD
     t.string   "author_link"
-=======
->>>>>>> d067c5f62c04f3aca86bf0a41d7a13775a32f908
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,5 @@
 
 <% @years.each do |year| %>
 Year: <%= year.year %>
-<%= year.imagemap.html_safe %><br />
+<%= raw year.imagemap %><br />
 <% end %>
