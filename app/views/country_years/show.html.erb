@@ -126,8 +126,8 @@ wmtt = null;
 document.onmousemove = updateWMTT;
 function updateWMTT(e) {
   if (wmtt != null && wmtt.style.display == 'block') {
-    x = (e.pageX ? e.pageX : window.event.x) + wmtt.offsetParent.scrollLeft - wmtt.offsetParent.offsetLeft;
-    y = (e.pageY ? e.pageY : window.event.y) + wmtt.offsetParent.scrollTop - wmtt.offsetParent.offsetTop;
+    x = (e.pageX ? e.pageX : window.event.x)
+    y = (e.pageY ? e.pageY : window.event.y)
     wmtt.style.left = (x + 10) + "px";
     wmtt.style.top   = (y + 10) + "px";
   }
