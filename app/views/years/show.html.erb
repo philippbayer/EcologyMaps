@@ -1,5 +1,19 @@
+<div style="float:left">
 <%= link_to("FAQ", "/faq.html") %>
-<center>
+<table>
+  <tr class="tabhead">
+	<th>Country</th>
+  </tr>
+<%countries_unsorted = CountryYear.find_all_by_number(@year.year)%>
+<%countries_sorted = countries_unsorted.sort_by{|country| country.country.name}%>
+<%countries_sorted.each do |country_years|%>
+<tr class="<%= cycle("tabeven","tabodd") %>">
+	<td><%= link_to(country_years.country.name,country_years) %></td>
+</tr>
+<%end%>
+</table>
+</div>
+<center>	
 <p>
 <% if @year.year != @last_year.year %>
 Previous Year: <%= link_to(@last_year.year, @last_year) %> 

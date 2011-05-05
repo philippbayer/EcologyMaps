@@ -86,7 +86,7 @@
 	<%image = tempname[0] + "_" + tempname[1] + ".jpeg"%>
 	<div id="<%=animal_counter%>" class="tooltip">		
 	<%if File.exist? RAILS_ROOT + "/public/images/pictures/" + image%>
-	<%= link_to image_tag("/images/pictures/" + image, :size => "300x300"), animal_joins.animal.image_link %><br/>
+	<%= link_to image_tag("/images/pictures/" + image), animal_joins.animal.image_link %><br/>
 	Picture by <%=animal_joins.animal.author%><br/>
 	<%=link_to animal_joins.animal.author_link, "Link"%><br/>
 	License: <%=animal_joins.animal.image_license%>	
@@ -129,7 +129,7 @@ function updateWMTT(e) {
     x = (e.pageX ? e.pageX : window.event.x)
     y = (e.pageY ? e.pageY : window.event.y)  
     wmtt.style.left = (x + 10) + "px";
-    wmtt.style.top   = (y + 10) + "px";
+    wmtt.style.top   = (y - 10) + "px";
   }
 }
 function showWMTT(id) {
