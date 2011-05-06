@@ -17,7 +17,7 @@
 <center>	
 <p>
 <% if @year.year != @last_year.year %>
-Previous Year: <%= link_to(@last_year.year, @last_year) %> 
+	Previous Year: <%= link_to(@last_year.year, @last_year) %>
 <% end %>
 
 Year: <b><%= @year.year %></b>
@@ -26,6 +26,5 @@ Year: <b><%= @year.year %></b>
 Next Year: <%= link_to(@next_year.year, @next_year) %>
 <% end %>
 </p>
-
 <%= raw @year.imagemap %>
 </center>
