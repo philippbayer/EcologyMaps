@@ -5,6 +5,8 @@ class PopulateYears < ActiveRecord::Migration
 		  t.string :imagemap
 		  t.string :data
 	  end
+
+	  change_column(:years, :imagemap, :longtext)
   end
 
   def self.down
