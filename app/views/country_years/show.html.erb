@@ -117,8 +117,9 @@
 <br />
 
 
-<%= link_to @last_year.number,@last_year%> | <%= link_to 'Edit', edit_country_year_path(@country_year) %> |
-<%= link_to 'Back', Year.find_by_year(@country_year.number) %> | <%= link_to @next_year.number,@next_year%>
+<%  if @last_year.number != @country_year.number %> <%= link_to @last_year.number,@last_year %> | <%end%> 
+	<%= link_to 'Back', Year.find_by_year(@country_year.number) %> 
+	<% if @next_year.number != @country_year.number %> | <%= link_to @next_year.number,@next_year%> <% end %>
 
 <script type="text/javascript">
 <!--
