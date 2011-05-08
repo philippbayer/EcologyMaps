@@ -128,8 +128,8 @@ function updateWMTT(e) {
   if (wmtt != null && wmtt.style.display == 'block') {
     x = (e.pageX ? e.pageX : window.event.x);
     y = (e.pageY ? e.pageY : window.event.y);
-    wmtt.style.left = (x  ) + "px";
-	wmtt.style.top  = (y  - wmtt.offsetHeight) + "px";
+    wmtt.style.left = x + "px";
+	wmtt.style.top  = (y - wmtt.offsetHeight) + "px";
   }
 }
 function showWMTT(id) {
