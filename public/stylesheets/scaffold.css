@@ -97,8 +97,12 @@ div.field, div.actions {
 
 .header{
 	background-color: #EEEEEE;
+	border-style: solid;
+	border-width: 1px;
 }
 
 .footer{
 	background-color: #EEEEEE;
+	border-style: solid;
+	border-width: 1px;
 }
