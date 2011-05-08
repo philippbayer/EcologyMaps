@@ -118,7 +118,7 @@
 
 
 <%= link_to @last_year.number,@last_year%> | <%= link_to 'Edit', edit_country_year_path(@country_year) %> |
-<%= link_to 'Back', @country_year %> | <%= link_to @next_year.number,@next_year%>
+<%= link_to 'Back', Year.find_by_year(@country_year.number) %> | <%= link_to @next_year.number,@next_year%>
 
 <script type="text/javascript">
 <!--
@@ -128,8 +128,8 @@ function updateWMTT(e) {
   if (wmtt != null && wmtt.style.display == 'block') {
     x = (e.pageX ? e.pageX : window.event.x);
     y = (e.pageY ? e.pageY : window.event.y);
-    wmtt.style.left = (x  ) + "px";
-	wmtt.style.top  = (y  - wmtt.offsetHeight) + "px";
+    wmtt.style.left = x + "px";
+	wmtt.style.top  = (y - wmtt.offsetHeight) + "px";
   }
 }
 function showWMTT(id) {
