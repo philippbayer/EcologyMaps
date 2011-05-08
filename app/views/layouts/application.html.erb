@@ -7,8 +7,17 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
+<div class="header">
+<center>
+<b>eUcoMap</b><br/>
+<%= link_to("Home", :root) %> | <%= link_to("FAQ","/faq.html") %>
+</center>
+</div>
 <%= yield %>
-
+<div class="footer">
+<center>
+Oh Hai I'm a footer - insert a Rails, MySQL-pic in me etc.
+</center>
+</div>
 </body>
 </html>
