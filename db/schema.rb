@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20110504085000) do
 
   create_table "years", :force => true do |t|
     t.string "year"
-    t.text   "imagemap", :limit => 2147483647
+    t.text   "imagemap"
     t.string "data"
   end
 
