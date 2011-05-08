@@ -14,8 +14,11 @@
 <%end%>
 </table>
 </div>
-<center>	
+<div style="float:left">
+No Sufficiency <img src=<%= url_for("/images/gradient.png") %> > 100% Sufficiency
+</div>
 <p>
+<center>	
 <% if @year.year != @last_year.year %>
 	Previous Year: <%= link_to(@last_year.year, @last_year) %>
 <% end %>
@@ -27,5 +30,4 @@ Next Year: <%= link_to(@next_year.year, @next_year) %>
 <% end %>
 </p>
 <%= raw @year.imagemap %>
-No Sufficiency <img src=<%= url_for("/images/gradient.png") %>> 100% Sufficiency
 </center>
