@@ -1,0 +1,162 @@
+Note: the first value is for green in the rgb-spectrum, red is 1-green, e.g. the second value
+# ACCORDING TO EACH YEAR'S MAXIMUM
+2010
+Austria : 226.95 : 28.05
+Belgium : 255.0 : 0.0
+Bulgaria : 239.7 : 15.3
+Cypern : 102.0 : 153.0
+Czech Republic : 153.0 : 102.0
+Germany : 252.45 : 2.55
+Denmark : 255.0 : 0.0
+Estonia : 249.9 : 5.1
+Spain  : 252.45 : 2.55
+Finland : 252.45 : 2.55
+France : 252.45 : 2.55
+Greece : 255.0 : 0.0
+Hungary : 219.3 : 35.7
+Ireland : 239.7 : 15.3
+Italia : 252.45 : 2.55
+Lithuania : 168.3 : 86.7
+Luxembourg : 255.0 : 0.0
+Latvia : 242.25 : 12.75
+Malta : 249.9 : 5.1
+Netherlands : 255.0 : 0.0
+Poland : 198.9 : 56.1
+Portugal : 226.95 : 28.05
+Rumania : 209.1 : 45.9
+Sweden : 255.0 : 0.0
+Slowenia : 188.7 : 66.3
+Slovakia : 188.7 : 66.3
+United Kingdom : 255.0 : 0.0
+2009
+2008
+Austria : 226.95 : 28.05
+Belgium : 255.0 : 0.0
+Bulgaria : 239.7 : 15.3
+Cypern : 63.75 : 191.25
+Czech Republic : 150.45 : 104.55
+Germany : 252.45 : 2.55
+Denmark : 255.0 : 0.0
+Estonia : 214.2 : 40.8
+Spain  : 244.8 : 10.2
+Finland : 252.45 : 2.55
+France : 232.05 : 22.95
+Greece : 252.45 : 2.55
+Hungary : 219.3 : 35.7
+Ireland : 219.3 : 35.7
+Italia : 255.0 : 0.0
+Lithuania : 155.55 : 99.45
+Luxembourg : 247.35 : 7.65
+Latvia : 226.95 : 28.05
+Malta : 237.15 : 17.85
+Netherlands : 255.0 : 0.0
+Poland : 43.35 : 211.65
+Portugal : 224.4 : 30.6
+Rumania : 209.1 : 45.9
+Sweden : 252.45 : 2.55
+Slowenia : 186.15 : 68.85
+Slovakia : 183.6 : 71.4
+United Kingdom : 255.0 : 0.0
+2007
+Austria : 224.4 : 30.6
+Belgium : 255.0 : 0.0
+Cypern : 63.75 : 191.25
+Czech Republic : 150.45 : 104.55
+Germany : 252.45 : 2.55
+Denmark : 255.0 : 0.0
+Estonia : 214.2 : 40.8
+Spain  : 242.25 : 12.75
+Finland : 175.95 : 79.05
+France : 232.05 : 22.95
+Greece : 252.45 : 2.55
+Hungary : 219.3 : 35.7
+Ireland : 219.3 : 35.7
+Italia : 255.0 : 0.0
+Lithuania : 155.55 : 99.45
+Luxembourg : 247.35 : 7.65
+Latvia : 226.95 : 28.05
+Malta : 237.15 : 17.85
+Netherlands : 255.0 : 0.0
+Poland : 43.35 : 211.65
+Portugal : 224.4 : 30.6
+Sweden : 234.6 : 20.4
+Slowenia : 186.15 : 68.85
+Slovakia : 183.6 : 71.4
+United Kingdom : 237.15 : 17.85
+2006
+Austria : 224.4 : 30.6
+Belgium : 255.0 : 0.0
+Cypern : 117.3 : 137.7
+Czech Republic : 150.45 : 104.55
+Germany : 252.45 : 2.55
+Denmark : 255.0 : 0.0
+Estonia : 214.2 : 40.8
+Spain  : 242.25 : 12.75
+Finland : 175.95 : 79.05
+France : 232.05 : 22.95
+Greece : 252.45 : 2.55
+Hungary : 219.3 : 35.7
+Ireland : 219.3 : 35.7
+Italia : 252.45 : 2.55
+Lithuania : 155.55 : 99.45
+Luxembourg : 247.35 : 7.65
+Latvia : 226.95 : 28.05
+Malta : 237.15 : 17.85
+Netherlands : 255.0 : 0.0
+Poland : 43.35 : 211.65
+Portugal : 224.4 : 30.6
+Sweden : 234.6 : 20.4
+Slowenia : 186.15 : 68.85
+Slovakia : 183.6 : 71.4
+United Kingdom : 237.15 : 17.85
+2005
+Austria : 221.85 : 33.15
+Belgium : 255.0 : 0.0
+Germany : 237.15 : 17.85
+Denmark : 252.45 : 2.55
+Spain  : 239.7 : 15.3
+Finland : 175.95 : 79.05
+France : 188.7 : 66.3
+Greece : 252.45 : 2.55
+Ireland : 219.3 : 35.7
+Italia : 249.9 : 5.1
+Luxembourg : 247.35 : 7.65
+Latvia : 224.4 : 30.6
+Netherlands : 255.0 : 0.0
+Portugal : 209.1 : 45.9
+Sweden : 234.6 : 20.4
+Slowenia : 183.6 : 71.4
+Slovakia : 165.75 : 89.25
+United Kingdom : 237.15 : 17.85
+2004
+Austria : 221.85 : 33.15
+Belgium : 255.0 : 0.0
+Germany : 66.3 : 188.7
+Denmark : 252.45 : 2.55
+Spain  : 237.15 : 17.85
+Finland : 173.4 : 81.6
+France : 188.7 : 66.3
+Greece : 252.45 : 2.55
+Ireland : 219.3 : 35.7
+Italia : 249.9 : 5.1
+Luxembourg : 247.35 : 7.65
+Netherlands : 255.0 : 0.0
+Portugal : 209.1 : 45.9
+Sweden : 232.05 : 22.95
+United Kingdom : 237.15 : 17.85
+2003
+Austria : 191.25 : 63.75
+Belgium : 232.05 : 22.95
+Germany : 68.85 : 186.15
+Denmark : 247.35 : 7.65
+Spain  : 221.85 : 33.15
+Finland : 219.3 : 35.7
+France : 186.15 : 68.85
+Greece : 226.95 : 28.05
+Ireland : 239.7 : 15.3
+Italia : 232.05 : 22.95
+Luxembourg : 247.35 : 7.65
+Netherlands : 255.0 : 0.0
+Portugal : 204.0 : 51.0
+Sweden : 188.7 : 66.3
+United Kingdom : 221.85 : 33.15
