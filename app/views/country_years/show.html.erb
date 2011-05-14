@@ -86,9 +86,12 @@
 	<%image = tempname[0] + "_" + tempname[1] + ".jpeg"%>
 	<div id="<%=animal_counter%>" class="tooltip">		
 	<%if File.exist? RAILS_ROOT + "/public/images/pictures/" + image%>
-	<%= link_to image_tag("/images/pictures/" + image), animal_joins.animal.image_link %><br/>
+		<%if animal_joins.animal.author_link != "\n" %>
+			<%= link_to image_tag("/images/pictures/" + image), animal_joins.animal.author_link %><br/>
+		<%else%>
+			<%= link_to image_tag("/images/pictures/" + image), animal_joins.animal.image_link %><br/>
+		<%end%>
 	Picture by <%=animal_joins.animal.author%><br/>
-	<%=link_to animal_joins.animal.author_link, "Link"%><br/>
 	License: <%=animal_joins.animal.image_license%>	
 	<%elsif animal_joins.animal.image_link != "none" %>
 	Due to copyright-restrictions we are not allowed to embed this picture. Just click to see the picture of this animal/plant
@@ -99,7 +102,13 @@
 	
 	
   <tr class="<%= cycle("tabeven","tabodd") %>">
+	<%if animal_joins.animal.author_link != "\n" %>
+	<td><i><a onmouseover="showWMTT('<%=animal_counter%>')" onmouseout="hideWMTT()" href="<%=animal_joins.animal.author_link%>">
+	<%elsif animal_joins.animal.image_link != "none"%>
 	<td><i><a onmouseover="showWMTT('<%=animal_counter%>')" onmouseout="hideWMTT()" href="<%=animal_joins.animal.image_link%>">
+	<%else%>
+	<td><i><a onmouseover="showWMTT('<%=animal_counter%>')" onmouseout="hideWMTT()" href="#">
+	<%end%>
 	<%= animal_joins.animal.name%></a></i></td>
     <td><%= animal_joins.animal.common %></td>
     <td><%= animal_joins.animal.category %></td>
