@@ -127,7 +127,14 @@
 
 
 <%  if @last_year.number != @country_year.number %> <%= link_to @last_year.number,@last_year %> | <%end%> 
-	<%= link_to 'Back', Year.find_by_year(@country_year.number) %> 
+
+<%= @type %>
+<% if @type == "habi" %>
+	<%= link_to 'Back', HabiYear.find_by_year(@country_year.number) %>
+<% else %>
+	<%= link_to 'Back', SuffYear.find_by_year(@country_year.number) %>
+<% end %>
+
 	<% if @next_year.number != @country_year.number %> | <%= link_to @next_year.number,@next_year%> <% end %>
 
 <script type="text/javascript">

@@ -26,6 +26,7 @@ class HabiYearsController < ApplicationController
 
   def show
     @habi_year = HabiYear.find(params[:id])
+	@type = "habi"
 
     # now next and previous habi_year for switching between them
 	# does it have a following habi_year?

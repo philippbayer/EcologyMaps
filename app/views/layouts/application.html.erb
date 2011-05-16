@@ -8,9 +8,17 @@
 <body>
 <div class="header">
 <center>
-<b>eUcoMap</b><br/>
-<%= link_to("Home", :root) %> | <%= link_to("FAQ","/faq.html") %><br/>
-<%= link_to("Colours according to Habitat",HabiYear.find_by_year(2010)) %> | <%= link_to("Colours according to Sufficiency",SuffYear.find_by_year(2010)) %>
+<b>eUcoMap</b>
+<table>
+	<tr>
+		<td align="right"><%= link_to("Home", :root) %></td> 
+		<td align="left"><%= link_to("FAQ","/faq.html") %></td>
+	</tr>
+	<tr>
+		<td align="right"><%= link_to("Colours according to Habitat",HabiYear.find_by_year(2010)) %></td>
+		<td align="left"><%= link_to("Colours according to Sufficiency",SuffYear.find_by_year(2010)) %></td>
+	</tr>
+</table>
 </center>
 </div>
 <%= yield %>

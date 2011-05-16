@@ -26,6 +26,7 @@ class SuffYearsController < ApplicationController
 
   def show
     @suff_year = SuffYear.find(params[:id])
+	@type = "suff"
 
     # now next and previous suff_year for switching between them
 	# does it have a following suff_year?
