@@ -26,8 +26,9 @@ class HabiYearsController < ApplicationController
 
   def show
     @habi_year = HabiYear.find(params[:id])
-	@type = "habi"
-
+	# Store the type of map in the session so that we can remember to what type of map to go back inside country_year's show
+	session[:map_type] = "habi"
+	
     # now next and previous habi_year for switching between them
 	# does it have a following habi_year?
 	if HabiYear.find_by_year(@habi_year.year.to_i + 1) != nil

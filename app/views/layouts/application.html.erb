@@ -9,11 +9,13 @@
 <div class="header">
 <center>
 <b>eUcoMap</b>
-<table>
+	<table>
 	<tr>
 		<td align="right"><%= link_to("Home", :root) %></td> 
 		<td align="left"><%= link_to("FAQ","/faq.html") %></td>
 	</tr>
+</table>
+<table>
 	<tr>
 		<td align="right"><%= link_to("Colours according to Habitat",HabiYear.find_by_year(2010)) %></td>
 		<td align="left"><%= link_to("Colours according to Sufficiency",SuffYear.find_by_year(2010)) %></td>

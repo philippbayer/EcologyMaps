@@ -128,8 +128,7 @@
 
 <%  if @last_year.number != @country_year.number %> <%= link_to @last_year.number,@last_year %> | <%end%> 
 
-<%= @type %>
-<% if @type == "habi" %>
+<% if session[:map_type] == "habi" %>
 	<%= link_to 'Back', HabiYear.find_by_year(@country_year.number) %>
 <% else %>
 	<%= link_to 'Back', SuffYear.find_by_year(@country_year.number) %>

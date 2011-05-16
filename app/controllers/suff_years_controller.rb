@@ -26,7 +26,8 @@ class SuffYearsController < ApplicationController
 
   def show
     @suff_year = SuffYear.find(params[:id])
-	@type = "suff"
+	# Store the type of map in the session so that we can remember to what type of map to go back inside country_year's show
+	session[:map_type] = "suff"
 
     # now next and previous suff_year for switching between them
 	# does it have a following suff_year?
