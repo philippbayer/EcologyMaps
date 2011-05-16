@@ -1,6 +1,7 @@
 Euromap::Application.routes.draw do
   resources :country_years
-  resources :years
+  resources :suff_years
+  resources :habi_years
   resources :countries
 
   # The priority is based upon order of creation:
@@ -60,5 +61,5 @@ Euromap::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 
-root :to => 'years#show', :id => 7
+root :to => 'suff_years#show', :id => 7
 end

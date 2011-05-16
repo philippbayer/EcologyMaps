@@ -1,0 +1,31 @@
+<div style="float:left">
+<table>
+  <tr class="tabhead">
+	<th>Country</th>
+  </tr>
+<%countries_unsorted = CountryYear.find_all_by_number(@suff_year.year)%>
+<%countries_sorted = countries_unsorted.sort_by{|country| country.country.name}%>
+<%countries_sorted.each do |country_years|%>
+<tr class="<%= cycle("tabeven","tabodd") %>">
+	<td><%= link_to(country_years.country.name,country_years) %></td>
+</tr>
+<%end%>
+</table>
+</div>
+<div style="float:left">
+0% Sufficiency <img src=<%= url_for("/images/gradient.png") %> > 100% Sufficiency
+</div>
+<p>
+<center>	
+<% if @suff_year.year != @last_suff_year.year %>
+	Previous Year: <%= link_to(@last_suff_year.year, @last_suff_year) %>
+<% end %>
+
+Year: <b><%= @suff_year.year %></b>
+
+<% if @suff_year.year != @next_suff_year.year %>
+Next Year: <%= link_to(@next_suff_year.year, @next_suff_year) %>
+<% end %>
+</p>
+<%= raw @suff_year.imagemap %>
+</center>

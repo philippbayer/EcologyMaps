@@ -9,7 +9,8 @@
 <div class="header">
 <center>
 <b>eUcoMap</b><br/>
-<%= link_to("Home", :root) %> | <%= link_to("FAQ","/faq.html") %>
+<%= link_to("Home", :root) %> | <%= link_to("FAQ","/faq.html") %><br/>
+<%= link_to("Colours according to Habitat",HabiYear.find_by_year(2010)) %> | <%= link_to("Colours according to Sufficiency",SuffYear.find_by_year(2010)) %>
 </center>
 </div>
 <%= yield %>

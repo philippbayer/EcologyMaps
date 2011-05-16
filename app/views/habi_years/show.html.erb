@@ -3,7 +3,7 @@
   <tr class="tabhead">
 	<th>Country</th>
   </tr>
-<%countries_unsorted = CountryYear.find_all_by_number(@year.year)%>
+<%countries_unsorted = CountryYear.find_all_by_number(@habi_year.year)%>
 <%countries_sorted = countries_unsorted.sort_by{|country| country.country.name}%>
 <%countries_sorted.each do |country_years|%>
 <tr class="<%= cycle("tabeven","tabodd") %>">
@@ -17,15 +17,15 @@
 </div>
 <p>
 <center>	
-<% if @year.year != @last_year.year %>
-	Previous Year: <%= link_to(@last_year.year, @last_year) %>
+<% if @habi_year.year != @last_habi_year.year %>
+	Previous Year: <%= link_to(@last_habi_year.year, @last_habi_year) %>
 <% end %>
 
-Year: <b><%= @year.year %></b>
+Year: <b><%= @habi_year.year %></b>
 
-<% if @year.year != @next_year.year %>
-Next Year: <%= link_to(@next_year.year, @next_year) %>
+<% if @habi_year.year != @next_habi_year.year %>
+Next Year: <%= link_to(@next_habi_year.year, @next_habi_year) %>
 <% end %>
 </p>
-<%= raw @year.imagemap %>
+<%= raw @habi_year.imagemap %>
 </center>

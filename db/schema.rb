@@ -53,7 +53,13 @@ ActiveRecord::Schema.define(:version => 20110504085000) do
     t.datetime "updated_at"
   end
 
-  create_table "years", :force => true do |t|
+  create_table "habi_years", :force => true do |t|
+    t.string "year"
+    t.text   "imagemap"
+    t.string "data"
+  end
+
+  create_table "suff_years", :force => true do |t|
     t.string "year"
     t.text   "imagemap"
     t.string "data"
