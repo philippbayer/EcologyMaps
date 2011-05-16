@@ -17,8 +17,11 @@
 </table>
 <table>
 	<tr>
+		<% if session[:map_type] == "suff" %>
 		<td align="right"><%= link_to("Colours according to Habitat",HabiYear.find_by_year(2010)) %></td>
+		<% else %>
 		<td align="left"><%= link_to("Colours according to Sufficiency",SuffYear.find_by_year(2010)) %></td>
+	<% end %>
 	</tr>
 </table>
 </center>
