@@ -4,4 +4,5 @@ class StaticController < ApplicationController
 			format.html
 			format.xml
 		end
+	end
 end
