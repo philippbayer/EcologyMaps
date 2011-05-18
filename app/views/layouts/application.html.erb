@@ -6,13 +6,13 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div class="header">
+<div class="header round">
 <center>
 <b>eUcoMap</b>
 	<table>
 	<tr>
 		<td align="right"><%= link_to("Home", :root) %></td> 
-		<td align="left"><%= link_to("FAQ","/faq.html") %></td>
+		<td align="left"><%= link_to("FAQ",:controller=> "static", :action => "faq") %></td>
 	</tr>
 </table>
 <table>
