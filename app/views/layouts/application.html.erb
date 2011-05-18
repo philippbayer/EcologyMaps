@@ -18,9 +18,9 @@
 <table>
 	<tr>
 		<% if session[:map_type] == "suff" %>
-		<td align="right"><%= link_to("Switch to colours according to Habitat",HabiYear.find_by_year(2010)) %></td>
-		<% else %>
-		<td align="left"><%= link_to("Switch to colours according to Sufficiency",SuffYear.find_by_year(2010)) %></td>
+		<td align="right"><%= link_to("Switch to colours according to Habitat",HabiYear.find_by_year(@suff_year.year)) %></td>
+		<% elsif session[:map_type] == "habi" %>
+		<td align="left"><%= link_to("Switch to colours according to Sufficiency",SuffYear.find_by_year(@habi_year.year)) %></td>
 	<% end %>
 	</tr>
 </table>

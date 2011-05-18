@@ -13,6 +13,7 @@ class CountryYearsController < ApplicationController
   # GET /country_years/1
   # GET /country_years/1.xml
   def show
+    session[:map_type] = "details"
     @country_year = CountryYear.find(params[:id])
     if @country_year.country.country_years.find_by_number(@country_year.number.to_i-1) != nil
       @last_year = @country_year.country.country_years.find_by_number(@country_year.number.to_i-1)

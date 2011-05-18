@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EUcoMaps - FAQ</title>
+  <style type="text/css">
+    body { background-color: #fff; color: #666; text-align: center; font-family: verdana, arial, helvetica, sans-serif; }
+    div.dialog {
+      width: 25em;
+      padding: 0 4em;
+      margin: 4em auto 0 auto;
+      border: 1px solid #ccc;
+      border-right-color: #999;
+      border-bottom-color: #999;
+    }
+	.hiddenbar {display:none} 
+	.shownbar {display:inline}
+    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+  </style>
+
+<script type="text/Javascript"> 
+function togglebar (barID) { 
+var whichpost = document.getElementById(barID); 
+if (whichpost.className=="shownbar") 
+{ whichpost.className="hiddenbar"; } 
+else { whichpost.className="shownbar"; } 
+} 
+</script>
+
+<script type='JavaScript'> 
+function getImgSize(imgSrc)
+{
+var newImg = new Image();
+newImg.src = imgSrc;
+var height = newImg.height;
+var width = newImg.width;
+alert(height)
+return height;
+}
+</script>
+
+</head>
+
+<body>
+<div align="left">
+	1.&#160;<a title="click to expand" href="javascript:togglebar('001')">Why?</a> 
+	<br /> 
+	<div class="hiddenbar" id="001"> 
+		This is a project from <a href="http://www.twitter.com/gedankenstuecke">Bastian Greshake</a> and <a href="http://www.twitter.com/PhilippBayer">Philipp Bayer</a>. We are both biologists with a (small) background in computer sciences and interested in evolution and ecology. The man-made decline of biodiversity continues as you are reading this. Many states are trying to stop this decline and there are statistics on how successful they are. <br/><br/>But statistics can be boring to read and hard to grasp. So we tried a more visual approach on the topic.<br /><br /></div>
+		2.&#160;<a title="click to expand" href="javascript:togglebar('002')">What?</a> 
+		<br /> 
+		<div class="hiddenbar" id="002"> 
+			The size of the countries on the maps is scaled according to how much percent of their area they dedicate to conservation habitats. The larger the country the larger the area they dedicate to conservation. <br/><br/>The colours of the countries reflect how sufficient this percentage is to reach the conservational aims.<br/><br/>The detailed views for each country at a given year give further information on the amount of CO2-emissions and which endangered species were assesst by the IUCN that year.<br /><br /></div>
+3.&#160;<a title="click to expand" href="javascript:togglebar('003')">Which data did you use?</a><br /> 
+	<div class="hiddenbar" id="003"> 
+		The data on habitats, their sufficiency, CO2-equivalent-emissions and the original maps where taken from <em> <a href="http://epp.eurostat.ec.europa.eu/portal/page/portal/statistics/search_database">eurostat</a></em>, provided by the European Commision. If you want to get the original data you can download the following databases, just  <a href="http://epp.eurostat.ec.europa.eu/portal/page/portal/statistics/search_database">search here for the databases env_bio1 and env_air_gge</a>.The maps <a href="http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco/popups/references/administrative_units_statistical_units_1">can also be freely downloaded.</a><br/><br/>The data of of endangered species was compiled & curated by hand, using the website of the <em><a href="http://iucnredlist.org">IUCN Redlist.</a></em><br /><br /></div>
+	4.&#160;<a title="click to expand" href="javascript:togglebar('004')">Why do i need to click to see the pictures of some animals?</a><br /> 
+	<div class="hiddenbar" id="004"> 
+Because copyright laws don't allow us to embed those pictures directly into the website. We only added those pictures which can be freely used or where copyright-holders gave us explicit permission.<br/><br/>If you have freely usable pictures (or want to give us permission to show your pictures) just send us an email to <em>admin@eucomap.net</em> and we'll add them to the website.<br /><br /></div>
+	5.&#160;<a title="click to expand" href="javascript:togglebar('005')">Why are there no pictures for some animals?</a><br /> 
+	<div class="hiddenbar" id="005"> 
+Because we could not find any pictures on the web. If you have pictures for missing species just let us know by an email to <em>admin@eucomap.net</em> and we'll add them to the site.<br /><br /></div>
+	6.&#160;<a title="click to expand" href="javascript:togglebar('006')">Which tools did you use?</a><br /> 
+	<div class="hiddenbar" id="006"> 
+The processing of the data was done using some self-written <em>Python</em>- and <em>Ruby</em>-scripts. The website is realized in <em>Ruby On Rails</em>. The whole code (and the raw and processed data) <a href="https://github.com/drsnuggles/EcologyMaps">can be downloaded from <em>github</em></a>. Feel free to edit this project and contribute.<br/><br/>The shapefiles where edited using <em><a href="http://www.qgis.org">Quantum GIS</em></a>, the scaled maps were created using <em><a href="http://scapetoad.choros.ch">ScapeToad</em></a>.<br /><br /></div>
+	7.&#160;<a title="click to expand" href="javascript:togglebar('007')">What are scaled habitats?</a><br /> 
+	<div class="hiddenbar" id="007"> 
+		Most european countries have, percentwise, a quite similar area of habitats. So the scaled maps showed no clear change to the unscaled maps. The scaled values where calculated to exaggerate this effect a little bit.<br/><br/>The scaling was done using this formula: |area for a country_year - mean(all for all countries in this year)|^1.5.<br /><br /></div>
+		8.&#160;<a title="click to expand" href="javascript:togglebar('008')">How did you color the maps?</a><br /> 
+		<div class="hiddenbar" id="008"> 
+			The "best" scaled habitat with the highest value from each year was set to 100%, and all the other countries of that year where scaled accordingly. These values where then fit to the RGB-value-range, and colored manually in GIMP to give a better distinction between countries in a year. <br/><br/>The value for green for a country was obtained by multiplying the habitat-value, divided by 100, with 255 (resulting in for example 180), and the value for red was obtained by subtracting the value for green from 255 (resulting in 75, in this example). <br/><br/>This procedure was done for each year, with blue (value: 30) added for each picture to make the colors less painful to the eyes.<br />Countries without colours do not have any data for that year.<br /><br /></div>
+</div>
+</body>
+</html>
