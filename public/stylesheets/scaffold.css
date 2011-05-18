@@ -100,9 +100,3 @@ div.field, div.actions {
 	border-style: solid;
 	border-width: 1px;
 }
-
-.round{
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-}
