@@ -4,28 +4,23 @@
   <title>eUcoMap</title>
   <%= stylesheet_link_tag :all %>
   <%= csrf_meta_tag %>
+<style type="text/css">
+.middle {vertical-align:middle}
+</style>
 </head>
 <body>
 <div class="header round">
-<center>
-	<img src="/images/logo.png">
-	<table>
-	<tr>
-		<td align="right"><%= link_to("Home", :root) %></td> 
-		<td align="left"><%= link_to("FAQ",:controller=> "static", :action => "faq") %></td>
-	</tr>
-	</table>
 
-<table>
-	<tr>
+		<%=link_to image_tag("/images/logo.png", :style => "vertical-align:middle"),:root %><b><%= link_to("Home", :root) %> <%= link_to("FAQ",:controller=> "static", :action => "faq") %>
+		
+		
 		<% if session[:map_type] == "suff" %>
-		<td align="right"><%= link_to("Switch to colours according to Habitat",HabiYear.find_by_year(@suff_year.year)) %></td>
+		<%= link_to("Switch to colours according to Habitat",HabiYear.find_by_year(@suff_year.year)) %>
 		<% elsif session[:map_type] == "habi" %>
-		<td align="left"><%= link_to("Switch to colours according to Sufficiency",SuffYear.find_by_year(@habi_year.year)) %></td>
+		<%= link_to("Switch to colours according to Sufficiency",SuffYear.find_by_year(@habi_year.year)) %>
 	<% end %>
-	</tr>
-</table>
-</center>
+
+</b>
 </div>
 <%= yield %>
 </body>
