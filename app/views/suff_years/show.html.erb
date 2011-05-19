@@ -10,7 +10,7 @@
 <%countries_sorted = countries_unsorted.sort_by{|country| country.country.name}%>
 <%countries_sorted.each do |country_years|%>
 <tr class="<%= cycle("tabeven","tabodd") %>">
-	<td><img src=<%= url_for("/images/icons/" + country_years.country.handle + ".png") %> <%= link_to(country_years.country.name,country_years) %></td>
+	<td><img src=<%= url_for("/images/icons/" + country_years.country.handle + ".png") %>> <%= link_to(country_years.country.name,country_years) %></td>
 </tr>
 <%end%>
 </div>
