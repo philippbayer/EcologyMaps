@@ -1,4 +1,7 @@
-<div style="float:left">
+<br/>
+<div style="float:left;width:130px;">
+<div class="header round">
+	<center>
 <table>
   <tr class="tabhead">
 	<th>Country</th>
@@ -7,10 +10,12 @@
 <%countries_sorted = countries_unsorted.sort_by{|country| country.country.name}%>
 <%countries_sorted.each do |country_years|%>
 <tr class="<%= cycle("tabeven","tabodd") %>">
-	<td><%= link_to(country_years.country.name,country_years) %></td>
+	<td><img src=<%= url_for("/images/icons/" + country_years.country.handle + ".png") %> <%= link_to(country_years.country.name,country_years) %></td>
 </tr>
 <%end%>
+</div>
 </table>
+</center>
 </div>
 <div style="float:left">
 0% Sufficiency <img src=<%= url_for("/images/gradient.png") %> > 100% Sufficiency

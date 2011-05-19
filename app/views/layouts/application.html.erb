@@ -8,13 +8,14 @@
 <body>
 <div class="header round">
 <center>
-<b>eUcoMap</b>
+	<img src="/images/logo.png">
 	<table>
 	<tr>
 		<td align="right"><%= link_to("Home", :root) %></td> 
 		<td align="left"><%= link_to("FAQ",:controller=> "static", :action => "faq") %></td>
 	</tr>
-</table>
+	</table>
+
 <table>
 	<tr>
 		<% if session[:map_type] == "suff" %>
