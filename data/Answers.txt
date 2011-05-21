@@ -1,0 +1,19 @@
+Publicly feature: Yes, why not?
+
+In a sentence, what is your visualisation about?
+
+eUcomap is about connecting several statistics of European countries (Sufficiency of Habitats, CO²-Emission, Area of Habitats) by visualising these hard-to-grasp numbers in a concise and understandable way.
+
+What does it tell you that wasn't obvious before?
+By providing maps for the years 2003 to 2010, users will gain an understanding of the development of natural conservation in the European union.
+The project shows that even in the recent years 2009 - 2010, some (rich and poor alike) countries still have to work a lot on their emission and habitat-areas. 
+
+Who will benefit from it and how? 
+We think that the average European citizen will benefit most of this project.This visualisation, based on openly available data, shows the current state of the conversation of nature in the European Union in an easy to understand way. By linking pictures to the scientific names of endangered animals people unfamiliar to these names will gain a better understanding about the animals endangered in the European Union.
+
+What data sources did you use? 
+The data on habitats, their sufficiency, CO2-equivalent-emissions and the original maps where taken from eurostat, provided by the European Commision. 
+The databases' names are env_bio1 and env_air_gge, downloaded at http://epp.eurostat.ec.europa.eu/portal/page/portal/statistics/search_database. The maps where obtained from http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco/popups/references/administrative_units_statistical_units_1 .
+
+The data of of endangered species was compiled & curated by hand, using the website of the IUCN Redlist: http://www.iucnredlist.org/ .
+
