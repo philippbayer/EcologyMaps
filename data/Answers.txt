@@ -11,6 +11,8 @@ The project shows that even in the recent years 2009 - 2010, some (rich and poor
 Who will benefit from it and how? 
 We think that the average European citizen will benefit most of this project.This visualisation, based on openly available data, shows the current state of the conversation of nature in the European Union in an easy to understand way. By linking pictures to the scientific names of endangered animals people unfamiliar to these names will gain a better understanding about the animals endangered in the European Union.
 
+Besides this the website used to display the data is highly modularized and can easily be adapted. Without much effort it is possible to add new data for years before 2003/after 2010 and the display of additional data (think of things like: sums of money spent for conservation for example) can also be done in an easy fashion. This setup also allows the re-use of the application for other continents or on a smaller scale for countries (so the USA or Germany could use a map of their country and scale it according to their states).
+
 What data sources did you use? 
 The data on habitats, their sufficiency, CO2-equivalent-emissions and the original maps where taken from eurostat, provided by the European Commision. 
 The databases' names are env_bio1 and env_air_gge, downloaded at http://epp.eurostat.ec.europa.eu/portal/page/portal/statistics/search_database. The maps where obtained from http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco/popups/references/administrative_units_statistical_units_1 .
