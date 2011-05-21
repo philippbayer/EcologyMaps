@@ -17,3 +17,4 @@ The databases' names are env_bio1 and env_air_gge, downloaded at http://epp.euro
 
 The data of of endangered species was compiled & curated by hand, using the website of the IUCN Redlist: http://www.iucnredlist.org/ .
 
+Animal-pictures where gathered by searching on the internet. Copyright-holders where contacted for permission to use the pictures.
