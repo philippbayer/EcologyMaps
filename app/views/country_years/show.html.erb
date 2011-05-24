@@ -14,9 +14,9 @@
   <b><font color="gray"> (o)</font></b>
   <%elsif @country_year.emission == "-"%>
   <%else%>
-  <% if @country_year.emission < @last_year.emission %> 
+  <% if @country_year.emission.to_i < @last_year.emission.to_i %> 
 	<b><font color="green"> (+)</font></b>
-  <% elsif @country_year.emission > @last_year.emission %>
+  <% elsif @country_year.emission.to_i > @last_year.emission.to_i %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.emission = @last_year.emission %>
   <b><font color="gray"> (o)</font></b>
@@ -52,9 +52,9 @@
   <b><font color="gray"> (o)</font></b>
   <%elsif @country_year.area_habitats_percent == "-"%>
   <%else%>
-  <% if @country_year.area_habitats_percent > @last_year.area_habitats_percent %> 
+  <% if @country_year.area_habitats_percent.to_i > @last_year.area_habitats_percent.to_i %> 
   <b><font color="green"> (+)</font></b>
-  <% elsif @country_year.area_habitats_percent < @last_year.area_habitats_percent %>
+  <% elsif @country_year.area_habitats_percent.to_i < @last_year.area_habitats_percent.to_i %>
   <b><font color="red"> (-)</font></b>
   <% elsif @country_year.area_habitats_percent = @last_year.area_habitats_percent %>
   <b><font color="gray"> (o)</font></b>
